@@ -12,4 +12,4 @@ By using this documentation website, you agree to the terms of use and privacy p
 
 ## Diagrams
 
-To display diagrams on our documentation website, we rely on [Kroki](https://kroki.io). This means that we send the diagram data to Kroki for rendering. The data originates from the diagram definitions contained within this repository. We cannot control what data Kroki collects from visitors.
+To display diagrams on our documentation website, we rely on [Kroki](https://kroki.io). This means that we send the diagram data to Kroki for rendering. The data originates from the diagram definitions contained within this repository. We cannot control what data Kroki collects from visitors. Kroki.io may collect data from visitors.
