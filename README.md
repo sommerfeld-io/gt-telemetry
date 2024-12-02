@@ -17,8 +17,6 @@ This project is a [Gran Turismo 7](https://www.gran-turismo.com/us/gt7/top) Tele
 
 ## Requirements and Features
 
-<!-- TODO link the GitHub story -->
-
 The racing dashboard should display information about the current race, the car, and the track. It is not aimed at providing a lap by lap analysis, but rather a real-time overview of the current racing situation.
 
 - Show current race position (e.g. 5/20 meaning you are running in 5th place out of 20 cars)
@@ -33,9 +31,11 @@ The racing dashboard should display information about the current race, the car,
 - Show current tire temperature
 - Show current fuel level
 
-The lap by lap analysis dashboard should provide a detailed analysis of each lap driven during the race. It should allow the user to compare lap times, sector times, and other telemetry data between laps. A user should be able to compare throttle and brake inputs, RPM, speed, and other data between laps. -->
+See <https://github.com/sommerfeld-io/gt-telemetry/issues/3> for the user story which describes the requirements in more detail.
 
-<!-- TODO link the GitHub story -->
+<!-- The lap by lap analysis dashboard should provide a detailed analysis of each lap driven during the race. It should allow the user to compare lap times, sector times, and other telemetry data between laps. A user should be able to compare throttle and brake inputs, RPM, speed, and other data between laps.
+
+See <https://github.com/sommerfeld-io/gt-telemetry/issues/4> for the user story which describes the requirements in more detail. -->
 
 ## Usage
 
@@ -57,7 +57,7 @@ It is recommended to set a static IP address for your PS5 in your router setting
 ## Architecture Constraints
 
 - Reading data from the Game is done via UDP
-    - Gran Turismo 7 does not officially provide a public API for external integrations, but there are mechanisms for accessing real-time telemetry data via the UDP (User Datagram Protocol) telemetry broadcasting feature built into the game. This feature is commonly used for creating dashboards, sim rigs, or external visualizations.
+    - Gran Turismo 7 does not officially provide a public API for external integrations, but there are mechanisms for accessing real-time telemetry data via the *UDP (User Datagram Protocol) telemetry broadcasting* feature built into the game. This feature is commonly used for creating dashboards, sim rigs, or external visualizations.
     - The *UDP telemetry broadcasting* feature in Gran Turismo 7 (GT7) allows the game to send real-time telemetry data over your local network to an external application or device.
 
 ## Building Block View
@@ -71,14 +71,29 @@ skinparam linetype ortho
 skinparam monochrome false
 skinparam componentStyle uml2
 skinparam backgroundColor transparent
-skinparam arrowColor black
-skinparam NoteBackgroundColor #eee
+skinparam arrowColor #e2e4e9d1
+
+skinparam NoteBorderColor #e2e4e9d1
+skinparam NoteBackgroundColor #1E2129
+skinparam NoteFontColor #e2e4e9d1
+
+skinparam ComponentBorderColor #e2e4e9d1
+skinparam ComponentFontColor #e2e4e9d1
+skinparam ComponentBackgroundColor #1E2129
+
+skinparam RectangleBorderColor #e2e4e9d1
+skinparam RectangleFontColor #e2e4e9d1
+
+skinparam ControlBorderColor #e2e4e9d1
+skinparam ControlFontColor #e2e4e9d1
+skinparam ControlBackgroundColor #1E2129
+
 skinparam activity {
     'FontName Ubuntu
     FontName Roboto
 }
 
-component ps5 as "PS5" {
+rectangle ps5 as "PlayStation 5" {
     control api as "UDP Telemetry" <<API>>
 }
 
@@ -88,11 +103,11 @@ rectangle Consumer {
     component Grafana <<Docker Container>>
 }
 
-note bottom of Consumer: Computer or RasPi
+note top of Consumer: Computer or RasPi
 
 api <-right- ta
 api -right-> ta
-ta -down-> Prometheus
+ta -right-> Prometheus
 Prometheus -down-> Grafana
 
 @enduml
