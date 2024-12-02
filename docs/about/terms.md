@@ -8,7 +8,7 @@ This documentation website is hosted on GitHub Pages. We do not set any cookies 
 
 However, we cannot control what data GitHub collects from visitors. Please refer to the [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement) for more information. The "Data collection" section of the [GitHub Pages documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection) explicitly states that GitHub may collect data from visitors to GitHub Pages websites.
 
-By using this documentation website, you agree to the terms of use and privacy policy described in this document.
+By using this documentation website, you agree to the terms of use and privacy policy described in this document as well as to the terms of use and privacy policy of GitHub and other third-party services that may be involved in the hosting of this website.
 
 ## Diagrams
 
