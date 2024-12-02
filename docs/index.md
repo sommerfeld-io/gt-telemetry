@@ -57,7 +57,7 @@ It is recommended to set a static IP address for your PS5 in your router setting
 ## Architecture Constraints
 
 - Reading data from the Game is done via UDP
-    - Gran Turismo 7 does not officially provide a public API for external integrations, but there are mechanisms for accessing real-time telemetry data via the UDP (User Datagram Protocol) telemetry broadcasting feature built into the game. This feature is commonly used for creating dashboards, sim rigs, or external visualizations.
+    - Gran Turismo 7 does not officially provide a public API for external integrations, but there are mechanisms for accessing real-time telemetry data via the *UDP (User Datagram Protocol) telemetry broadcasting* feature built into the game. This feature is commonly used for creating dashboards, sim rigs, or external visualizations.
     - The *UDP telemetry broadcasting* feature in Gran Turismo 7 (GT7) allows the game to send real-time telemetry data over your local network to an external application or device.
 
 ## Building Block View
@@ -71,14 +71,29 @@ skinparam linetype ortho
 skinparam monochrome false
 skinparam componentStyle uml2
 skinparam backgroundColor transparent
-skinparam arrowColor black
-skinparam NoteBackgroundColor #eee
+skinparam arrowColor #e2e4e9d1
+
+skinparam NoteBorderColor #e2e4e9d1
+skinparam NoteBackgroundColor #1E2129
+skinparam NoteFontColor #e2e4e9d1
+
+skinparam ComponentBorderColor #e2e4e9d1
+skinparam ComponentFontColor #e2e4e9d1
+skinparam ComponentBackgroundColor #1E2129
+
+skinparam RectangleBorderColor #e2e4e9d1
+skinparam RectangleFontColor #e2e4e9d1
+
+skinparam ControlBorderColor #e2e4e9d1
+skinparam ControlFontColor #e2e4e9d1
+skinparam ControlBackgroundColor #1E2129
+
 skinparam activity {
     'FontName Ubuntu
     FontName Roboto
 }
 
-component ps5 as "PS5" {
+rectangle ps5 as "PlayStation 5" {
     control api as "UDP Telemetry" <<API>>
 }
 
@@ -88,11 +103,11 @@ rectangle Consumer {
     component Grafana <<Docker Container>>
 }
 
-note bottom of Consumer: Computer or RasPi
+note top of Consumer: Computer or RasPi
 
 api <-right- ta
 api -right-> ta
-ta -down-> Prometheus
+ta -right-> Prometheus
 Prometheus -down-> Grafana
 
 @enduml
