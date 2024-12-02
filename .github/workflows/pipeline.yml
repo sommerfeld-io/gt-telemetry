@@ -159,13 +159,13 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           provenance: true
           sbom: true
-      - name: Docker Scout CVEs for :${{ github.sha }}
-        uses: docker/scout-action@v1.14.0
-        with:
-          command: cves
-          image: ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USER }}/${{ env.TELEMETRY_APP_NAME }}:${{ github.sha }}
-          exit-code: false
-          write-comment: ${{ github.event_name == 'pull_request' }}
+      # - name: Docker Scout CVEs for :${{ github.sha }}
+      #   uses: docker/scout-action@v1.14.0
+      #   with:
+      #     command: cves
+      #     image: ${{ env.REGISTRY }}/${{ secrets.DOCKERHUB_USER }}/${{ env.TELEMETRY_APP_NAME }}:${{ github.sha }}
+      #     exit-code: false
+      #     write-comment: ${{ github.event_name == 'pull_request' }}
 
   # ----- Release stage ---------------------------------------------------------------------------
 
