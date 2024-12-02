@@ -1,6 +1,6 @@
 # Contribute to this Project
 
-[file-issues]: https://github.com/sommerfeld-io/template-repository/issues
+[file-issues]: https://github.com/sommerfeld-io/gt-telemetry/issues
 
 ## Code
 

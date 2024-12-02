@@ -210,11 +210,11 @@ To ensure that our development process is organized and efficient, we use a task
 
 All task and todo tracking will be done through a GitHub project.
 
-### User Stories
+### User Stories / Job Stories
 
-We want requirements to define small focused needs rather than vast vague projects. We use user stories to describe our requirements. We try to finish a user story within a couple of days at most. We need to keep in mind, that we integrate our changes daily, so we must design our user stories accordingly.
+We want requirements to define small focused needs rather than vast vague projects. We use user stories or job stories to describe our requirements. We try to finish a story within a couple of days at most. We need to keep in mind, that we integrate our changes daily, so we must design our stories accordingly.
 
-If we can't think of user need in terms of a story, we don't understand what our software is meant to achieve yet. If we can't think of an example, that would demonstrate that the need is fulfilled, we don't really understand the problem (domain) yet.
+If we can't think of user need / job need in terms of a story, we don't understand what our software is meant to achieve yet. If we can't think of an example, that would demonstrate that the need is fulfilled, we don't really understand the problem (domain) yet.
 
 ### Architecture Decisions
 
@@ -222,8 +222,8 @@ We use architecture decision records (ADRs) to document the key decisions made d
 
 We treat ADRs as working items, updating them as necessary to reflect the current state of the issue. Thats why we manage and track ADRs as GitHub issues. This approach allows us to easily reference and link to ADRs from other parts of the documentation and use the GitHub issue for collaboration and discussion.
 
-See [all issues labeled as ADR](https://github.com/sommerfeld-io/template-repository/issues?q=is%3Aissue+label%3AADR) for a list of all ADRs.
+See [all issues labeled as ADR](https://github.com/sommerfeld-io/gt-telemetry/issues?q=is%3Aissue+label%3AADR) for a list of all ADRs.
 
 ### Risks and Technical Debts
 
-All issues labeled as `risk` (= some sort of risk or a technical debt) or `security` (= disclosed security issues - e.g. CVEs) [are tracked as GitHub issue](https://github.com/sommerfeld-io/template-repository/issues?q=is%3Aissue+label%3Asecurity%2Crisk+is%3Aopen) and carry the respective label.
+All issues labeled as `risk` (= some sort of risk or a technical debt) or `security` (= disclosed security issues - e.g. CVEs) [are tracked as GitHub issue](https://github.com/sommerfeld-io/gt-telemetry/issues?q=is%3Aissue+label%3Asecurity%2Crisk+is%3Aopen) and carry the respective label.

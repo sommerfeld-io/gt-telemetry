@@ -12,6 +12,6 @@ updates:
       interval: weekly
 
   - package-ecosystem: docker
-    directory: docs
+    directory: .
     schedule:
       interval: weekly
