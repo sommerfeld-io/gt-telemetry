@@ -17,8 +17,6 @@ This project is a [Gran Turismo 7](https://www.gran-turismo.com/us/gt7/top) Tele
 
 ## Requirements and Features
 
-<!-- TODO link the GitHub story -->
-
 The racing dashboard should display information about the current race, the car, and the track. It is not aimed at providing a lap by lap analysis, but rather a real-time overview of the current racing situation.
 
 - Show current race position (e.g. 5/20 meaning you are running in 5th place out of 20 cars)
@@ -33,9 +31,11 @@ The racing dashboard should display information about the current race, the car,
 - Show current tire temperature
 - Show current fuel level
 
-The lap by lap analysis dashboard should provide a detailed analysis of each lap driven during the race. It should allow the user to compare lap times, sector times, and other telemetry data between laps. A user should be able to compare throttle and brake inputs, RPM, speed, and other data between laps. -->
+See <https://github.com/sommerfeld-io/gt-telemetry/issues/3> for the user story which describes the requirements in more detail.
 
-<!-- TODO link the GitHub story -->
+<!-- The lap by lap analysis dashboard should provide a detailed analysis of each lap driven during the race. It should allow the user to compare lap times, sector times, and other telemetry data between laps. A user should be able to compare throttle and brake inputs, RPM, speed, and other data between laps.
+
+See <https://github.com/sommerfeld-io/gt-telemetry/issues/4> for the user story which describes the requirements in more detail. -->
 
 ## Usage
 
